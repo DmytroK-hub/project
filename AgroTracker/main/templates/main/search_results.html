@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Результати пошуку</title>
+</head>
+<body>
+    <h2>Результати пошуку для "{{ query }}"</h2>
+    <ul>
+        {% for result in results %}
+            <li>{{ result.field_name }}</li>
+        {% empty %}
+            <li>Нічого не знайдено.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Назад</a>
+</body>
+</html>

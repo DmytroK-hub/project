@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroTracker</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 150px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .auth-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .auth-button {
+            background-color: #007BFF;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .auth-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-buttons">
+        <button class="auth-button">Увійти</button>
+        <button class="auth-button">Зареєструватися</button>
+    </div>
+
+    <h1>AgroTracker</h1>
+
+    <form method="get" action="{% url 'search' %}">
+        <input type="text" name="query" placeholder="Пошук...">
+        <button type="submit" class="button">Пошук</button>
+    </form>
+
+    <div>
+        <button class="button">Фільтр</button>
+        <button class="button">Сортування</button>
+    </div>
+</body>
+</html>
